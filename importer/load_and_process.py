@@ -23,7 +23,7 @@ docs = loader.load()
 embeddings = OpenAIEmbeddings(model=EMBEDDING_MODEL, )
 
 text_splitter = SemanticChunker(
-    embeddings=OpenAIEmbeddings()
+    embeddings=embeddings
 )
 
 chunks = text_splitter.split_documents(docs)
@@ -32,6 +32,6 @@ PGVector.from_documents(
     documents=chunks,
     embedding=embeddings,
     collection_name=PG_COLLECTION_NAME,
-    connection_string="postgresql+psycopg://postgres@localhost:5432/pdf_rag_vectors",
+    connection_string=os.getenv("POSTGRES_URL"),
     pre_delete_collection=True,
 )
