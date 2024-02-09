@@ -14,7 +14,7 @@ uvicorn = "^0.23.2"
 langserve = {extras = ["server"], version = ">=0.0.30"}
 pydantic = "<2"
 tqdm = "^4.66.1"
-unstructured = {extras = ["all-docs"], version = "^0.12.2"}
+unstructured = {extras = ["pdf"], version = "^0.12.2"}
 langchain-experimental = "^0.0.49"
 python-dotenv = "^1.0.0"
 openai = "^1.9.0"
