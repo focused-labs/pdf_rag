@@ -6,7 +6,7 @@ from langchain_community.vectorstores.pgvector import PGVector
 from langchain_experimental.text_splitter import SemanticChunker
 from langchain_openai import OpenAIEmbeddings
 
-from config import EMBEDDING_MODEL, PG_COLLECTION_NAME
+from app.config import EMBEDDING_MODEL, PG_COLLECTION_NAME
 
 load_dotenv()
 
