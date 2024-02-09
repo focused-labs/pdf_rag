@@ -45,7 +45,7 @@ function App() {
 
     setMessages(prevMessages => [...prevMessages, {message, isUser: true}]);
 
-    await fetchEventSource(`${"http://localhost:8000"}/rag/stream`, {
+    await fetchEventSource(`${process.env.REACT_APP_BACKEND_URL}/rag/stream`, {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
