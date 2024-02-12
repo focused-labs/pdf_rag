@@ -1,11 +1,7 @@
 ---
-title: {{title}}
-emoji: {{emoji}}
-colorFrom: {{colorFrom}}
-colorTo: {{colorTo}}
-sdk: {{sdk}}
-sdk_version: {{sdkVersion}}
-app_file: app.py
+title: PDF RAG Tutorial Repo
+emoji: 😜
+app_file: app/app.py
 pinned: false
 ---
 
