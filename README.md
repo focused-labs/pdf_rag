@@ -3,6 +3,7 @@ title: PDF RAG Tutorial Repo
 emoji: 😜
 app_file: app/app.py
 pinned: false
+sdk: docker
 ---
 
 # pdf_rag
