@@ -1,5 +1,7 @@
 FROM python:3.11-slim
 
+ENV PORT 8080
+
 RUN apt update && apt install -y libpq-dev
 
 RUN pip install poetry==1.6.1
@@ -20,6 +22,6 @@ COPY ./app ./app
 
 RUN poetry install --no-interaction --no-ansi
 
-EXPOSE 8080
+EXPOSE $PORT
 
-CMD exec uvicorn app.server:app --host 0.0.0.0 --port 8080
+CMD exec uvicorn app.server:app --host 0.0.0.0 --port $PORT
